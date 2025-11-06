@@ -281,3 +281,26 @@ document.querySelector("#clearHistoryBtn").addEventListener("click", () => {
   historyData = [];
   historyContainer.innerHTML = "<p>History cleared!</p>";
 });
+// const output = document.getElementById("output");
+
+// // Backend URL
+// const BACKEND_URL = "http://localhost:8000";
+
+// // GET request
+// document.getElementById("getBtn").addEventListener("click", async () => {
+//   const res = await fetch(`${BACKEND_URL}/api/message`);
+//   const data = await res.json();
+//   output.textContent = data.message;
+// });
+
+// // POST request
+// document.getElementById("postBtn").addEventListener("click", async () => {
+//   const res = await fetch(`${BACKEND_URL}/api/data`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ name: "Jahnvi", course: "MCA" })
+//   });
+
+//   const data = await res.json();
+//   output.textContent = data.status + " ✅";
+// });
