@@ -3,7 +3,9 @@ import cors from "cors";
 import axios from "axios";
 
 const app = express();
-const port = 8000;
+// const port = 8000;
+const port = process.env.PORT || 8000;
+
 
 app.use(cors());
 app.use(express.json());
@@ -53,6 +55,10 @@ app.get("/weather/:city", async (req, res) => {
 });
 
 // ✅ Start server
-app.listen(port, () => {
-  console.log(`✅ Shifra backend running at http://localhost:${port}`);
+// app.listen(port, () => {
+//   console.log(`✅ Shifra backend running at http://localhost:${port}`);
+// });
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`✅ Shifra backend running on port ${port}`);
 });
